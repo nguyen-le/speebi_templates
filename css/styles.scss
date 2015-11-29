@@ -1,0 +1,181 @@
+$color-primary: #673AB7;
+$color-primarylight: #D1C4E9;
+$color-offwhite: #EDE7F6;
+$color-copylight: #616161;
+$color-copydark: #212121;
+$color-green:#4CAF50;
+$color-orange:#FF6F00;
+$menu-width:60px;
+
+//@mixins
+@mixin hide-text {
+    overflow:hidden;
+    text-indent:-9000px;
+    display:block;
+}
+@mixin block-size($w, $h){
+  width: $w;
+  height: $h;
+}
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -ms-border-radius: $r;
+  border-radius: $r;
+}
+
+//@extend
+.color-primary { color: $color-primary; }
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.bg-std { background: no-repeat center center; }
+
+.float-left { float:left; }
+
+.float-right { float:right; }
+
+//global styles
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal; //TBD font-family
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: $color-offwhite;
+  color: $color-copydark;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  @extend .color-primary;
+}
+
+h1 { font-size:48px; }
+
+h2 { font-size:36px; }
+
+ul { list-style-type: none; }
+
+.message {
+  @include border-radius(3px);
+  border: 1px solid $color-copylight;
+  padding: 20px;
+  display: block;
+}
+.msg-success {
+  @extend .message;
+  border: 1px solid $color-green;
+}
+.msg-warning {
+  @extend .message;
+  border-color: $color-orange;
+}
+
+.user-img img {
+  @include border-radius(100%);
+}
+.user-name, .bill-title {
+  @extend .color-primary;
+}
+
+.payment-amount {
+  font-weight: bold; //TODO font-family
+}
+.debit {
+  color: $color-orange;
+}
+.credit {
+  color: $color-green;
+}
+
+//nav menu
+#main-menu {
+  @include block-size($menu-width,100%);
+  @extend .float-left;
+  background-color: $color-primary;
+  position: fixed;
+  a {
+    @include hide-text;
+    @extend .bg-std;
+  }
+  h1 {
+    margin:0;
+    background-color: $color-offwhite;
+    a {
+      @include block-size(100%,80px);
+      background-image: url(http://placehold.it/30x50);
+    }
+  }
+  ul {
+    margin:0;
+    padding:0;
+    a {
+      @include block-size(60px,60px);
+      background-image: url(http://placehold.it/30x30);
+      &:hover {
+        background-color: $color-primarylight;
+      }
+    }
+  }
+}
+
+//views
+.container {
+  margin-left: $menu-width;
+}
+.panel {
+  margin-left: 30px;
+  width: 40vw;
+  height: 100vh;
+  overflow: scroll;
+  @extend .float-left;
+}
+.panel::-moz-scrollbar {
+  display: none;
+}
+.panel::-webkit-scrollbar {
+  display: none;
+}
+
+.list-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  line-height: 1.2;
+  dt {
+    flex-grow: 2;
+    margin: auto 10px;
+  }
+  dd {
+    text-align: right;
+  }
+  .user-name {
+    font-weight: bold; //TBD font-family
+  }
+  .bill-title, .bill-duedate, .payment-date, .payment-createtime {
+    font-size: 85%;
+  }
+  .bill-title {
+    font-style: italic; //or font-weight # TBD font-family
+  }
+}
+
+#dashboard-infogfx {
+  margin-left: 30px;
+  padding-left: 30px;
+  height: 100vh;
+  border-left: 1px solid $color-copylight;
+}

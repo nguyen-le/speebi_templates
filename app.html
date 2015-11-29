@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Split Bill dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav id="main-menu">
+        <h1><a href="#">Split Bill</a></h1>
+        <ul>
+            <li><a id="nav-home" href="javascript:void(0)">Home</a></li>
+            <li><a id="nav-bills" href="javascript:void(0)">Bills</a></li>
+            <li><a id="nav-friends" href="javascript:void(0)">Friends</a></li>
+            <li><a id="nav-settings" href="javascript:void(0)">Settings</a></li>
+        </ul>
+    </nav>
+    <div id="dashboard" class="container">
+        <div id="dashboard-left" class="panel">
+            <section id="upcoming">
+                <h2>Upcoming due</h2>
+                <p class="msg-success">You have no upcoming bill :)</p>
+                <dl>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Rebecca Delight</span> charged<br>
+                            <span class="bill-title">BJ's</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($25.89)</span><br>
+                            <span class="bill-duedate">Due Dec 20</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Elain Chen</span> charged<br>
+                            <span class="bill-title">Baskin and Robbins</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($4.50)</span><br>
+                            <span class="bill-duedate">Due Jan 20</span>
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+            <section id="recent-activities">
+                <h2>Recent Activities</h2>
+                <dl>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Rebecca Delight</span> charged you<br>
+                            <span class="bill-title">BJ's</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($25.89)</span><br>
+                            <span class="payment-createtime">3h</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Elain Chen</span> charged you<br>
+                            <span class="bill-title">Baskin and Robbins</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($4.50)</span><br>
+                            <span class="payment-createtime">Nov 25</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">John Doe</span> paid you<br>
+                            <span class="bill-title">Old Tea House</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount credit">$10.00</span><br>
+                            <span class="payment-date">Nov 16</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            You paid <span class="user-name">Ryan Steinberg</span><br>
+                            <span class="bill-title"> October Utilities</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($25.58)</span><br>
+                            <span class="payment-date">Nov 3</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Raymond Tseng</span> paid you<br>
+                            <span class="bill-title">Lunch</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount credit">$17.40</span><br>
+                            <span class="payment-date">Oct 31</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            You charged <span class="user-name">Long Pham</span><br>
+                            <span class="bill-title">Layang Layang</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount credit">$10.00</span><br>
+                            <span class="payment-createtime">Oct 30</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Rebecca Delight</span> charged you<br>
+                            <span class="bill-title">BJ's</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($25.89)</span><br>
+                            <span class="payment-createtime">3h</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Elain Chen</span> charged you<br>
+                            <span class="bill-title">Baskin and Robbins</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($4.50)</span><br>
+                            <span class="payment-createtime">Nov 25</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">John Doe</span> paid you<br>
+                            <span class="bill-title">Old Tea House</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount credit">$10.00</span><br>
+                            <span class="payment-date">Nov 16</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            You paid <span class="user-name">Ryan Steinberg</span><br>
+                            <span class="bill-title"> October Utilities</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount debit">($25.58)</span><br>
+                            <span class="payment-date">Nov 3</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            <span class="user-name">Raymond Tseng</span> paid you<br>
+                            <span class="bill-title">Lunch</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount credit">$17.40</span><br>
+                            <span class="payment-date">Oct 31</span>
+                        </dd>
+                    </div>
+                    <div class="list-item">
+                        <a href="" class="user-img"><img src="http://placehold.it/50x50" alt=""></a>
+                        <dt>
+                            You charged <span class="user-name">Long Pham</span><br>
+                            <span class="bill-title">Layang Layang</span>
+                        </dt>
+                        <dd>
+                            <span class="payment-amount credit">$10.00</span><br>
+                            <span class="payment-createtime">Oct 30</span>
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+        </div> <!-- dashboard -->
+        <div id="dashboard-infogfx" class="panel">
+            <h2>At a glance</h2>
+            <p class="message">Not enough data.<br>
+                Create more bills to see your infographics here.</p>
+        </div> <!-- at a glance infogfx -->
+    </div> <!-- views -->
+    <div id="bills" class="container">
+      <div id="bills-left" class="panel">
+        List of all bills with filter
+      </div>
+      <div id="bills-right" class="panel">
+        Individual bill
+        all the people and payments on the bill
+      </div>
+    </div>
+    <div id="friends" class="container">
+      <div id="friends-left" class="panel">
+        List of all friends
+      </div>
+      <div id="friends-right" class="panel">
+        Their personal information and bills/payments with you are involved in.
+      </div>
+    </div>
+    <div id="settings" class="container">
+    </div>
+</body>
+</html>
