@@ -1,5 +1,6 @@
 $color-primary: #673AB7;
 $color-primarylight: #D1C4E9;
+$color-primary-copylight: #b29cda;
 $color-offwhite: #EDE7F6;
 $color-copylight: #616161;
 $color-copydark: #212121;
@@ -23,6 +24,11 @@ $menu-width:60px;
   -ms-border-radius: $r;
   border-radius: $r;
 }
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
 
 //@extend
 .color-primary { color: $color-primary; }
@@ -35,7 +41,7 @@ $menu-width:60px;
   }
 }
 
-.bg-std { background: no-repeat center center; }
+.bg-center { background: no-repeat center center; }
 
 .float-left { float:left; }
 
@@ -70,9 +76,10 @@ ul { list-style-type: none; }
 
 .message {
   @include border-radius(3px);
-  border: 1px solid $color-copylight;
+  border: 1px solid $color-primarylight;
   padding: 20px;
   display: block;
+  color: #777;
 }
 .msg-success {
   @extend .message;
@@ -85,6 +92,7 @@ ul { list-style-type: none; }
 
 .user-img img {
   @include border-radius(100%);
+  @include block-size(50px,50px);
 }
 .user-name, .bill-title {
   @extend .color-primary;
@@ -108,14 +116,14 @@ ul { list-style-type: none; }
   position: fixed;
   a {
     @include hide-text;
-    @extend .bg-std;
+    @extend .bg-center;
   }
   h1 {
     margin:0;
     background-color: $color-offwhite;
     a {
       @include block-size(100%,80px);
-      background-image: url(http://placehold.it/30x50);
+      background-image: url(../images/logo.png);
     }
   }
   ul {
@@ -123,18 +131,59 @@ ul { list-style-type: none; }
     padding:0;
     a {
       @include block-size(60px,60px);
-      background-image: url(http://placehold.it/30x30);
-      &:hover {
+      &:hover, &.active {
         background-color: $color-primarylight;
       }
     }
   }
+  #nav-home {
+    background-image: url(../images/dashboard.png);
+    &:hover, &.active {
+      background-image: url(../images/dashboard_active.png);
+    }
+  }
+  #nav-bills {
+    background-image: url(../images/bills.png);
+    &:hover, &.active {
+      background-image: url(../images/bills_active.png);
+    }
+  }
+  #nav-friends {
+    background-image: url(../images/friends.png);
+    &:hover, &.active {
+      background-image: url(../images/friends_active.png);
+    }
+  }
+  #nav-settings {
+    background-image: url(../images/settings.png);
+    &:hover, &.active {
+      background-image: url(../images/settings_active.png);
+    }
+  }
 }
 
-//views
+//-----create new
+#create-new {
+  @include hide-text;
+  @include block-size(50px,50px);
+  @include border-radius(100%);
+  @extend .bg-center;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: $color-primary;
+  &:hover {
+    @include box-shadow(0px 1px 5px 1px rgba(55,55,55,.25));
+  }
+}
+
+
+//-----views
 .container {
   margin-left: $menu-width;
+  height:100%;
 }
+
 .panel {
   margin-left: 30px;
   width: 40vw;
@@ -173,9 +222,14 @@ ul { list-style-type: none; }
   }
 }
 
-#dashboard-infogfx {
+#dashboard-left {
+  padding-right: 1px;
+  margin-right: 1px;
+}
+
+#dashboard-right {
   margin-left: 30px;
   padding-left: 30px;
   height: 100vh;
-  border-left: 1px solid $color-copylight;
+  border-left: 1px solid $color-primarylight;
 }
